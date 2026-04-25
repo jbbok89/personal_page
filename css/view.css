@@ -6,7 +6,7 @@
 }
 
 .container {
-  max-width: 1000px; /* 최대 넓이 1000px 제한*/
+  max-width: 1000px; 
   margin: 0 auto;
   width: 80%;
 }
@@ -15,7 +15,7 @@
 .img_container {
   width: 100%;
   height: 300px;
-  overflow: hidden; /* 넘치는 이미지 숨김 */
+  overflow: hidden; 
 }
 
 .origin_img {
@@ -27,17 +27,17 @@
 /* 제목 + 글 */
 .project_detail {
   color: #333333;
-  padding: 150px 0 100px 0; /* 위 150px, 아래 100px 여백 */
+  padding: 150px 0 100px 0;
   flex: 1;
 }
 
 /* 제목 */
 .project_title {
-  font-size: clamp(26px, 5vw, 42px); /* 반응형 글자 크기 (최소/유동/최대) */
+  font-size: clamp(26px, 5vw, 42px);
   font-weight: 800;
   color: #000000;
   margin-bottom: 50px;
-  word-break: keep-all; /* 단어 중간 줄바꿈 방지 (한글 깨짐 방지) */
+  word-break: keep-all;
 }
 
 /* 글 */
@@ -61,30 +61,44 @@
 }
 
 .detail_list li {
-  position: relative; /* ::before(가짜 요소) 기준점 */
+  position: relative;
   padding-left: 15px;
   margin-bottom: 10px;
-  font-size: 18px !important; /* 글자 크기 (우선 적용) */
+  font-size: 18px !important;
 }
 
 .detail_list li::before {
-  content: "•"; /* 점 모양 생성 */
-  position: absolute; /* li 기준으로 위치 조정 */
-  left: 0; /* 왼쪽 정렬 */
-  top: -3px; /* 세로 위치 미세 조정 */
+  content: "•"; 
+  position: absolute; 
+  left: 0;
+  top: -3px;
   color: #000;
   font-size: 20px;
   font-weight: bold;
 }
 
-/*코드 박스*/
+/* 본문 링크 */
+.detail_list li a {
+    color: #666666; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.detail_list li a:hover {
+    text-decoration: underline;
+    color: #333333;
+}
+
+/* 코드 박스 */
 pre {
-  background-color: #1e1e1e;   /* 배경 */
-  color: #d4d4d4;              /* 글자색 */
+  background-color: #1e1e1e;   
+  color: #d4d4d4;          
   padding: 20px;
   border-radius: 10px;
-  overflow-x: auto;            /* 가로 스크롤 */
-  line-height: 1.5;
+  max-width: 100%; 
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 code {
@@ -93,12 +107,13 @@ code {
 }
 
 .comment {
-  color: gray; /* VS Code 느낌 초록 */
+  color: gray;
 }
 
+/* 이미지 */
 .post_image img {
-  max-width: 1500px;
-  width: 100%;
+  max-width: 100%; 
+  height: auto;
   display: block;
   margin: 30px auto;
 }
