@@ -102,10 +102,11 @@ pre {
 }
 
 code {
-  font-family: Consolas, monospace;
+  font-family: Consolas, monospace; 
   font-size: 14px;
 }
 
+/* 주석 */
 .comment {
   color: gray;
 }

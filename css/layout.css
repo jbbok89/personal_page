@@ -37,7 +37,7 @@ body {
 
 .menu a {
   color: white;
-  display: block; /* 클릭 영역을 한 줄 전체로 확장 */
+  display: block; 
   text-decoration: none; /* 밑줄 제거 */
   transition: 0.3s; /* hover 0.3초 지연 */
 }
